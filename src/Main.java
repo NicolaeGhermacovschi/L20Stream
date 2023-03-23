@@ -5,13 +5,17 @@ public class Main {
 
         System.out.println("Hello world!");
         Task task = new Task();
-        task.addEmploye();
+        //task.addEmploye();
         System.out.println("====ex 1=====");
-        System.out.println(task.showEmpl(task.addEmploye()));
+        System.out.println(task.showEmpl());
         System.out.println("====ex 2=====");
-        System.out.println(task.orderEmployee(task.addEmploye()));
+        System.out.println(task.orderEmployee());
         System.out.println("====ex 3=====");
-        System.out.println(task.showEmlpSoft(task.addEmploye()));
+        System.out.println(task.showEmlpSoft());
+        System.out.println();
+        System.out.println("=====================");
+        System.out.println( );
+
 
 
 

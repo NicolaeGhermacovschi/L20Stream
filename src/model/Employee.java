@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Employee {
     private  String name;
     private Department department;
@@ -56,5 +58,18 @@ public class Employee {
                 ", age=" + age +
                 ", isPayedPerHour=" + isPayedPerHour +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return age == employee.age && isPayedPerHour == employee.isPayedPerHour && Objects.equals(name, employee.name) && department == employee.department;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, department, age, isPayedPerHour);
     }
 }
